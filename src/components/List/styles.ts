@@ -16,7 +16,7 @@ export const Container = styled.div`
         height: 250px;
         object-fit: cover;
         border-radius: 16px;
-        }
+        }s
                p { 
         
                 width: 450px;

@@ -14,7 +14,6 @@ export const GlobalCss = createGlobalStyle`
         background-color: ${cores.backgroundCont};
         }
         .container {
-            background-color: ${cores.backgroundBod};
             box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
             max-width: 1024px;
             width: 100%;

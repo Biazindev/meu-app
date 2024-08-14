@@ -1,13 +1,13 @@
 import { Container, Card } from "./styles"
-import caixa from '../../assets/caixa.jpg'
+import Efood from '../../assets/Efood.png'
 
 
-const Description = () => {
+const ListCard = () => {
     return (
         <Container>
             <Card>
                 <div className="container">
-                    <img src={caixa} alt="" />
+                    <img src={Efood} alt="" />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, culpa suscipit eum laudantium dicta accusamus provident quisquam recusandae accusantium porro facilis id tenetur? Tempora atque laborum sint harum, commodi ea!</p>
                 </div>
             </Card>
@@ -15,4 +15,4 @@ const Description = () => {
     )
 }
 
-export default Description
+export default ListCard
