@@ -16,9 +16,8 @@ export const Container = styled.div`
         height: 250px;
         object-fit: cover;
         border-radius: 16px;
-        }s
+        }
                p { 
-        
                 width: 450px;
                 font-size: 16px;
                 line-height: 48px;
@@ -33,6 +32,14 @@ export const Container = styled.div`
 export const Card = styled.div`
 background-color: ${cores.backgroundCont};
 
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+
+    &.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
     .container {
     background-color: ${cores.backgroundBod};
     }

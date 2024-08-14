@@ -34,6 +34,14 @@ export const Container = styled.div`
 export const Card = styled.div`
 background-color: ${cores.backgroundBod};
 
+     opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+
+    &.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
     .container {
     background-color: ${cores.backgroundCont};
     }
