@@ -1,23 +1,21 @@
-import { Container, Card } from "./styles"
-import seuApp from '../../assets/seuapp.png'
+import { Container} from "./styles"
 import WhatsAppLink from "../Whats"
-import { useInView } from 'react-intersection-observer'
+import banner from '../../assets/banner.jpg'
+import { ButtonLink } from "../Button/styles"
 
 const Hero = () => {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-    })
+  const phoneNumber = '5517981716648'
+  const message = 'Olá, gostaria de saber mais sobre...'
 
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     return (
         <>
             <Container>
-                <Card ref={ref} className={inView ? 'visible' : ''}>
-                    <div className="container">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, culpa suscipit eum laudantium dicta accusamus provident quisquam recusandae accusantium porro facilis id tenetur? Tempora atque laborum sint harum, commodi ea!</p>
-                        <img src={seuApp} alt="Seu App" />
-                    </div>
-                </Card>
+                <img src={banner} alt="app"/>
+                <ButtonLink to={whatsappUrl} target="_blank" rel="noopener noreferrer">Solicite seu orçamento</ButtonLink>
+                <div className="overlay"></div> 
+                        <p>Dê um upgrade no seu negócio com um site incrível, um app que fideliza seus clientes e um sistema de vendas que simplifica sua gestão</p>
+                            <span>Vamos fazer sua loja crescer no mundo digital!</span>
             </Container>
             <WhatsAppLink />
         </>

@@ -9,7 +9,7 @@ export const Container = styled.div`
         margin-top: 8px;
         padding: 32px;
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-around;        
 
         
         img {

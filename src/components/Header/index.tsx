@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import fundo from '../../assets/header3.png'
 import { ContainerHeader, Display, LinkHeader } from './styles'
 
@@ -7,18 +8,18 @@ const Header = () => {
             <img src={fundo}/>
            <Display>
            <div>
-                <p>Home</p>
+                <LinkHeader to={'/'}>Home</LinkHeader>
             </div>
            <nav>
                 <ul>
                     <li>
-                        <p>Portifólio</p>
+                        <LinkHeader to={'/portifolio'}>Portifólio</LinkHeader>
                     </li>
                     <li>
-                       <p>Agenda</p>
+                       <LinkHeader to={'/agenda'}>Agenda</LinkHeader>
                     </li>
                     <li>
-                        <p>Contato</p>
+                        <LinkHeader to={'/form'}>Contato</LinkHeader>
                     </li>
                     <li>
                         <p>Sobre</p>

@@ -1,9 +1,10 @@
 export const cores = {
     text1: '#CAD3C8',
-    backgroundCont: '#3d3d3d',
-    backgroundBod: '#2C3A47',
+    backgroundCont: '#273c75',
+    backgroundBod: '#7f8fa6',
     background2: '#747d8c',
-    azulEscuro: '#2F3640'
+    azulEscuro: '#2F3640',
+    black: '#000'
 } 
 
 
