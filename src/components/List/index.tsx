@@ -1,6 +1,8 @@
-import { Container, Card } from "./styles"
+import { Container, Card, CardItem } from "./styles"
 import Eplay from '../../assets/Eplay.png'
 import { useInView } from 'react-intersection-observer'
+import { ButtonLink } from "../Button/styles"
+import WhatsAppLink from "../Whats"
 
 
 const List = () => {
@@ -8,15 +10,37 @@ const List = () => {
         triggerOnce: true,
         threshold: 0.5,
     })
+
+    const phoneNumber = '5517981716648'
+    const message = 'Olá, gostaria de saber mais sobre...'
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+
+    const getDescricao = (descricao: string) => {
+        if (descricao.length > 166) {
+            return descricao.slice(0, 163) + '...'
+        }
+        return descricao
+    }
+
     return (
-        <Container>
-            <Card ref={ref} className={inView ? 'visible' : ''}>
-            <div className="container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, culpa suscipit eum laudantium dicta accusamus provident quisquam recusandae accusantium porro facilis id tenetur? Tempora atque laborum sint harum, commodi ea!</p>
-                <img src={Eplay} alt="" />
-            </div>
-            </Card>
-        </Container>
+        <>
+            <Container>
+                <Card ref={ref} className={inView ? 'visible' : ''}>
+                    <div className="container">
+                    <img src={Eplay} alt="Seu App" />
+                        <CardItem>
+                        <div className="adjuste">
+                        <h2>Conquiste Clientes Online e Off-line!</h2>
+                        <p>{getDescricao('Com um site impactante, um app envolvente e um sistema de vendas que funciona em qualquer lugar, sua loja estará preparada para o sucesso em todas as frentes. Vamos começar?')}</p>
+                                <ButtonLink target="_blank" rel="noopener noreferrer" to={whatsappUrl}>Saiba mais</ButtonLink>
+                        </div>
+                        </CardItem>
+                    </div>
+                </Card>
+            </Container>
+            <WhatsAppLink />
+        </>
     )
 }
 

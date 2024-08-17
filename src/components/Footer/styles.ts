@@ -1,14 +1,25 @@
 import { styled } from "styled-components";
-import { cores } from "../../styles/variaveis";
+import { breakpoints, cores } from "../../styles/variaveis";
 
 export const Container = styled.footer` 
     display: flex;    
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 150px;
     padding-top: 16px;
     background-color: ${cores.azulEscuro};
     color: #535c68;
+    margin-top: auto;
+
+    @media(max-width: ${breakpoints.mobile}) {
+        background-size: cover;
+        width: 100%;
+        height: 350px;
+        display: block;
+        padding: 24px;
+
+    }
 
     div {
         text-align: start;
@@ -25,17 +36,18 @@ export const Container = styled.footer`
         font-size: 14px;
         line-height: 1.6;
         text-align: start;
+        @media(max-width: ${breakpoints.mobile}) {
     }
-
-    @media (min-width: 768px) {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
 
         div {
             margin: 0 24px;
             text-align: left;
+
+            @media(max-width: ${breakpoints.mobile}) {
+            background-size: cover;
+            width: 100%;
+            display: block; 
+    }
         }
     }
 `
@@ -50,15 +62,22 @@ export const Contato = styled.div`
     p {
         margin-right: 12px;
         text-align: start;
+
+        @media(max-width: ${breakpoints.mobile}) {
+        margin-top: 16px;
+        width: 300px;
+        margin-left: 0;
+    }
     }
 
     span {
         font-weight: bold;
         text-align: start;
     }
-
-    @media (min-width: 768px) {
-        margin: 0 24px;
+        @media(max-width: ${breakpoints.mobile}) {
+        background-size: cover;
+        width: 100%;
+        display: block;  
     }
 `
 

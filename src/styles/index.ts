@@ -1,6 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components'
-import { cores } from './variaveis'
-
+import { createGlobalStyle } from 'styled-components'
+import { breakpoints, cores } from './variaveis'
 
 export const GlobalCss = createGlobalStyle`
     * {
@@ -10,17 +9,26 @@ export const GlobalCss = createGlobalStyle`
         font-family: Roboto, sans-serif;
         list-style: none;
      }
-        body {
+
+     html, body {
+        overflow-x: hidden;
+        }
+    body {
         background-color: ${cores.backgroundCont};
+    }
+    .container {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        align-items: center;
+
+        @media (max-width: ${breakpoints.mobile}) {
+            grid-template-columns: 1fr;
         }
-        .container {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
-            max-width: 1024px;
-            width: 100%;
-            margin: 0 auto;
-            display: grid;
-            align-items: center;
-        }
-    }`
+
+    }
+`
 
 export default GlobalCss

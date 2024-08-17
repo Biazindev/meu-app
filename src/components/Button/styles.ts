@@ -41,8 +41,8 @@ export const ButtonLink = styled(Link)`
         &:hover {
             background-color: #00a8ff;
             border: none;
-            height: 48px;
-            width: 300px;
+            height: 36px;
+            width: 205px;
         }
     }
 `

@@ -7,7 +7,9 @@ export const cores = {
     black: '#000'
 } 
 
-
-
-
-
+export const breakpoints = {
+    smallMobile: '320px',
+    mobile: '480px',
+    tablet: '768px',
+    desktop: '1024px',
+}

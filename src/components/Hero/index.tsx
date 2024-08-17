@@ -14,7 +14,7 @@ const Hero = () => {
                 <img src={banner} alt="app"/>
                 <ButtonLink to={whatsappUrl} target="_blank" rel="noopener noreferrer">Solicite seu orçamento</ButtonLink>
                 <div className="overlay"></div> 
-                        <p>Dê um upgrade no seu negócio com um site incrível, um app que fideliza seus clientes e um sistema de vendas que simplifica sua gestão</p>
+                        <p>Dê um upgrade no seu negócio com um site incrível</p>
                             <span>Vamos fazer sua loja crescer no mundo digital!</span>
             </Container>
             <WhatsAppLink />

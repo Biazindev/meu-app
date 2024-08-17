@@ -10,4 +10,12 @@ export const Container = styled.div`
             align-items: center;
             background-color: #fff;
             overflow-y: hidden;
+
+        @media(max-width: 741px) {
+        max-width: 741px;
+        margin: 0 auto;        
+        width: 80%;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 `

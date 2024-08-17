@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { cores } from "../../styles/variaveis";
+import { breakpoints, cores } from "../../styles/variaveis";
 
 export const Conteudo = styled.div`
             max-width: 1024px;
@@ -24,6 +24,19 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+
+    @media(max-width: 990px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+    @media(max-width: 686px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+}
 `
 
 

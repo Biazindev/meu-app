@@ -16,16 +16,17 @@ export const Whats = styled.div`
             transform: scale(1);
         }
         40% {
-            transform: scale(1);
-        }
-        60% {
             transform: scale(1.1);
         }
-        80% {
-            transform: scale(1);
+        60% {
+            transform: scale(1.2);
         }
-        150% {
-            transform: scale(1);
+        80% {
+            transform: scale(1.3);
+        }
+        100% {
+            transform: scale(1.4);
         }
     }
+        
 `
