@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import fundo from '../../assets/header3.png';
-import { ContainerHeader, Display, Hamburguer, LinkHeader, NavMobile } from './styles';
+import { ContainerHeader, Display, DisplayHeader, Hamburguer, LinkHeader, NavMobile } from './styles';
 import { useDispatch } from 'react-redux';
 import { open } from '../../components/store/reducer/modal';
 
@@ -16,6 +16,27 @@ const Header: React.FC = () => {
     return (
         <ContainerHeader>
             <img src={fundo} alt="Header Background" />
+            <DisplayHeader>
+                    <nav>
+                        <div>
+                            <LinkHeader onClick={() => setIsMenuOpen(false)} to="/">Home</LinkHeader>
+                        </div>
+                        <ul>
+                            <li>
+                                <LinkHeader onClick={() => setIsMenuOpen(false)} to="/portifolio">Projetos</LinkHeader>
+                            </li>
+                            <li>
+                                <LinkHeader onClick={() => setIsMenuOpen(false)} to="/agenda">Agenda</LinkHeader>
+                            </li>
+                            <li>
+                                <LinkHeader onClick={() => setIsMenuOpen(false)} to="/form">Repositório</LinkHeader>
+                            </li>
+                            <li>
+                                <LinkHeader onClick={() => setIsMenuOpen(false)} to={'/'}>Sobre</LinkHeader>
+                            </li>
+                        </ul>
+                    </nav>
+                </DisplayHeader>
             <Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <span />
                 <span />

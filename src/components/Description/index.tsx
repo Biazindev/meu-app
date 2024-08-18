@@ -15,8 +15,8 @@ const Description = () => {
     const message = 'Olá, gostaria de saber mais sobre...'
 
     const getDescricao = (descricao: string) => {
-        if (descricao.length > 166) {
-            return descricao.slice(0, 163) + '...'
+        if (descricao.length > 117) {
+            return descricao.slice(0, 114) + '...'
         }
         return descricao
     }

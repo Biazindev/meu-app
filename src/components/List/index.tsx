@@ -1,5 +1,5 @@
 import { Container, Card, CardItem } from "./styles"
-import Eplay from '../../assets/Eplay.png'
+import Eplay from '../../assets/header.png'
 import { useInView } from 'react-intersection-observer'
 import { ButtonLink } from "../Button/styles"
 import WhatsAppLink from "../Whats"
@@ -17,8 +17,8 @@ const List = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
     const getDescricao = (descricao: string) => {
-        if (descricao.length > 166) {
-            return descricao.slice(0, 163) + '...'
+        if (descricao.length > 117) {
+            return descricao.slice(0, 114) + '...'
         }
         return descricao
     }

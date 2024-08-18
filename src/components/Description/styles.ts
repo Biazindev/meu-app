@@ -68,6 +68,7 @@ export const Container = styled.div`
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 40px;
+                margin-bottom: 24px;
             }
         }
     }

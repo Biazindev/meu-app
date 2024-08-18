@@ -2,16 +2,30 @@ import styled from "styled-components"
 import { breakpoints, cores } from "../../styles/variaveis"
 import { ButtonLink } from "../Button/styles"
 
+
 export const Container = styled.div`
     background-color: ${cores.backgroundCont};
-    height: 440px;
+    height: 320px;
+
+        .slick-prev,
+        .slick-next {
+        z-index: 1003;
+        top: 50%;
+        transform: translateY(-50%);
+         }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
     @media(max-width: ${breakpoints.mobile}) {
         height: 360px;
     }
 
     img {
-        height: 450px;
+        height: 320px;
         width: 100%;
 
         @media(max-width: ${breakpoints.mobile}) {
@@ -20,12 +34,13 @@ export const Container = styled.div`
     }
 
     .overlay {
+        margin: 0 auto;
         position: absolute;
         top: 116px;
         left: 0;
         width: 100%;
-        height: 440px;
-        background: rgba(0, 0, 0, 0.7);
+        height: 320px;
+        background: rgba(0, 0, 0, 0.4);
         z-index: 1;
 
         @media(max-width: ${breakpoints.mobile}) {
@@ -36,7 +51,7 @@ export const Container = styled.div`
     ${ButtonLink} {
         position: relative;
         top: -120px;
-        left: 1024px;
+        left: 884px;
         text-decoration: none;
         justify-content: center;
         align-items: center;
@@ -57,10 +72,10 @@ export const Container = styled.div`
         position: relative;
         font-size: 32px;
         top: -516px;
-        left: 32px;
+        left: 170px;
         color: ${cores.text1};
         font-weight: bold;
-        z-index: 2;
+        z-index: 1004;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 4px 4px 8px rgba(0, 0, 0, 0.9);
 
         @media(max-width: ${breakpoints.tablet}) {
@@ -92,13 +107,6 @@ export const Container = styled.div`
     div {
         display: flex;
         justify-content: space-around;
-
-        img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 16px;
-        }
 
         p { 
             width: 450px;

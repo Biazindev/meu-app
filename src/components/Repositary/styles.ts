@@ -58,6 +58,12 @@ export const RepoItem = styled.li`
         align-items: center;
         margin: 16px 0;
     }
+
+    @media(max-width: 741px) {
+        width: 280px;
+        overflow: visible;
+        display: block
+    }
 `
 
 export const RepoTitle = styled.h2`

@@ -96,4 +96,32 @@ export const NavMobile = styled.nav`
     @media(min-width: ${breakpoints.tablet}) {
         display: none;
     }
-`;
+`
+
+export const DisplayHeader = styled.div`
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    z-index: 1003;
+    top: 35px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    
+    
+    nav {
+
+        display: flex;
+        justify-content: space-around;
+            
+        ul{
+            display: flex;
+            position: relative;
+
+            li {
+                margin-left: 24px;
+            }
+        }
+    }
+`

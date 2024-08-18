@@ -68,8 +68,9 @@ export const Container = styled.div`
                 width: 100%;
                 font-size: 16px;
                 font-weight: 400;
-                line-height: 28px;
+                line-height: 34px;
                 text-align: start;
+                margin-bottom: 16px;
             }
                 h2{
                     text-align: center;

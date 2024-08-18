@@ -51,6 +51,16 @@ const Repositories: React.FC = () => {
 
     if (repos.length === 0) return <p>No repositories found</p>
 
+    const getDescricao = (descricao: string | null) => {
+        if (!descricao) {
+            return 'No description available' 
+        }
+        if (descricao.length > 20) {
+            return descricao.slice(0, 17) + '...'
+        }
+        return descricao
+    }
+
     return (
         <Container>
             <div>
@@ -60,15 +70,15 @@ const Repositories: React.FC = () => {
             <RepoList>
                 {repos.map((repo) => (
                     <RepoItem key={repo.id}>
-                        <RepoTitle>{repo.name}</RepoTitle>
-                        <RepoDescription>{repo.description || 'No description available'}</RepoDescription>
+                        <RepoTitle>{getDescricao(repo.name)}</RepoTitle>
+                        <RepoDescription>{getDescricao (repo.description) || 'No description available'}</RepoDescription>
                         <p><strong>Language:</strong> {repo.language || 'Not specified'}</p>
                         <p><strong>Size:</strong> {repo.size} KB</p>
                         <p><strong>Stars:</strong> {repo.stargazers_count}</p>
                         <p><strong>Forks:</strong> {repo.forks_count}</p>
                         <p><strong>Watchers:</strong> {repo.watchers_count}</p>
                         <p><strong>Open Issues:</strong> {repo.open_issues_count}</p>
-                        <p><strong>Default Branch:</strong> {repo.default_branch}</p>
+                        <p><strong>Default Branch:</strong> {getDescricao(repo.default_branch)}</p>
                         <ButtonLink to={repo.html_url} target="_blank" rel="noopener noreferrer">
                             Saiba mais
                         </ButtonLink>

@@ -17,8 +17,8 @@ const ListCard = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
     const getDescricao = (descricao: string) => {
-        if (descricao.length > 166) {
-            return descricao.slice(0, 163) + '...'
+        if (descricao.length > 117) {
+            return descricao.slice(0, 114) + '...'
         }
         return descricao
     }
