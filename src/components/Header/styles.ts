@@ -105,9 +105,13 @@ export const DisplayHeader = styled.div`
     justify-content: center;
     z-index: 1003;
     top: 35px;
-    display: flex;
+    display: none;
     margin: 0 auto;
     align-items: center;
+
+    @media(min-width: 770px) {
+        display: flex;
+    }
     
     
     nav {
