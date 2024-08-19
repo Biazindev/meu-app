@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.11",
     "@types/react-redux": "^7.1.33",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.7.4",
     "formik": "^2.4.6",
     "next.js": "^1.0.3",
     "react": "^18.2.0",
