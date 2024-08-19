@@ -20,13 +20,9 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     arrows: true
   }
-
-  console.log('Banner 1:', banner1)
-  console.log('Banner 2:', banner2)
-  console.log('Banner 3:', banner3)
 
   return (
     <>

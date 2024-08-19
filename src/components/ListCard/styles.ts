@@ -2,7 +2,7 @@ import { styled } from "styled-components"
 import { breakpoints, cores } from "../../styles/variaveis"
 
 export const Container = styled.div`
-    background-color: ${cores.backgroundCont};
+    background-color: ${cores.azulEscuro};
     margin-bottom: 8px;
 
     div {
@@ -86,7 +86,7 @@ export const Card = styled.div`
     }
 
     .container {
-        background-color: ${cores.backgroundCont};
+        background-color: ${cores.azulEscuro};
         height: 314px;
     }
 

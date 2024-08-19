@@ -90,7 +90,7 @@ export const Container = styled.div`
 `
 
 export const Card = styled.div`
-    background-color: ${cores.backgroundCont};
+    background-color: ${cores.azulEscuro};
     opacity: 0;
     transform: translateX(50px);
     transition: opacity 0.9s ease-out, transform 0.9s ease-out;

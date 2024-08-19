@@ -14,7 +14,7 @@ export const GlobalCss = createGlobalStyle`
         overflow-x: hidden;
         }
     body {
-        background-color: ${cores.backgroundCont};
+        background-color: ${cores.azulEscuro};
     }
     .container {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);

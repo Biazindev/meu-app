@@ -37,15 +37,12 @@ export const Display = styled.div<{ $isOpen: boolean }>`
 
         @media (max-width: ${breakpoints.tablet}) {
             flex-direction: column;
-            align-items: flex-start;
-            background: ${cores.backgroundBod};
-            width: 150px;
-            border-radius: 8px;
-            position: absolute;
-            top: -24px;
+            margin-top: 90px;
+            top: -175px;
             left: 0;
             padding: 16px;
             display: ${(props) => (props.$isOpen ? "flex" : "none")};
+            z-index: 5000;
      }
     }
 `;

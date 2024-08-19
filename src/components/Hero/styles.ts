@@ -4,8 +4,8 @@ import { ButtonLink } from "../Button/styles"
 
 export const Container = styled.div`
     position: relative;
-    background-color: ${cores.backgroundCont};
-    height: 320px;
+    background-color: ${cores.azulEscuro};
+    height: 420px;
 
     .slick-prev,
     .slick-next {
@@ -16,11 +16,18 @@ export const Container = styled.div`
 
     img {
         width: 100%;
-        height: auto;
+        height: 420px;
+        object-fit: inherit;
         display: block;
+        
+        @media(max-width: ${breakpoints.tablet}) {
+        width: 100%;
+        font-size: 16px;
+        object-fit: cover;
+    }
     }
 
-    @media(max-width: ${breakpoints.mobile}) {
+    @media(max-width: ${breakpoints.tablet}) {
         height: 360px;
     }
 
@@ -32,6 +39,9 @@ export const Container = styled.div`
         height: 100%;
         background: rgba(0, 0, 0, 0.4);
         z-index: 1;
+        @media(max-width: ${breakpoints.tablet}) {
+        height: 420px;
+    }
     }
 
     ${ButtonLink} {
