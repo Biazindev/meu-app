@@ -25,10 +25,18 @@ const Footer = () => (
             
             <LinkRedes>
                 <p><span>Redes Sociais</span></p>
+                <a href="https://www.linkedin.com/in/tiagobiazin/" target="_blank" rel="noopener noreferrer">
                 <img src={linkedin} alt="LinkedIn" />
+                </a>
+                <a href="https://www.facebook.com/tiago.tiagobiazin?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
                 <img src={facebook} alt="Facebook" />
+                </a>
+                <a href="https://github.com/Biazindev" target="_blank" rel="noopener noreferrer">
                 <img src={github} alt="GitHub" />
+                </a>
+                <a href="https://www.instagram.com/tiago_adriana_biazin?igsh=MXNsNm9rcjZ2OHc4aw==" target="_blank" rel="noopener noreferrer">
                 <img src={instagram} alt="Instagram" />
+                </a>
             </LinkRedes>
         </Contato>
     </Container>
