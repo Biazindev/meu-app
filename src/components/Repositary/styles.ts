@@ -33,6 +33,10 @@ export const RepoList = styled.ul`
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 
+    >:hover {
+    border: 3px solid #61DBFB;
+    }
+
     @media(max-width: 741px) {
         max-width: 741px;
         margin: 0 auto;        

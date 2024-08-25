@@ -1,115 +1,82 @@
-import { styled } from "styled-components";
-import { breakpoints, cores } from "../../styles/variaveis";
-
-export const Conteudo = styled.div`
-            max-width: 1024px;
-            width: 100%;
-            margin: 0 auto;
-            display: grid;
-            align-items: center;
-
-            a {
-                display: flex;
-                margin: 0  0 32px 0;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-            }
-`
+import styled from 'styled-components'
+import { cores } from '../../styles/variaveis'
 
 export const Container = styled.div`
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 1024px;
+    width: 100%;
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
+    gap: 24px;
 
-    @media(max-width: 990px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-    @media(max-width: 686px) {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-}
-`
-
-
-
-export const ButtonCv = styled.a`
-    
-    button {
-        margin-top: 32px;
-        font-size: 16px;
-        font-weight: bold;
-        color: ${cores.text1};
-        width: 200px;
-        height: 32px;
-        background-color: transparent;
-        border: 1px solid black;
-        border-radius: 8px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #00a8ff;
-            border: none;
-            height: 48px;
-            width: 300px;
-        }
+    > :hover {
+    border: 3px solid #61DBFB;
     }
-    
+
+    @media(max-width: 980px) {
+        width: 300px;
+        display: grid;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    @media(max-width: 620px) {
+        width: 300px;
+        display: grid;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
 `
 
-export const Card = styled.div`
+export const SectionTitle = styled.h1`
+    font-size: 24px;
+    color: ${cores.text1};
+    margin-bottom: 20px;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+`
 
-    width: 330px;
-    height: 473px;
-    background-color: ${cores.backgroundBod};
+export const ProjectCard = styled.div`
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
-    &:hover {
-            background-color: #3c40c6;
-            border: none;
-        }
+    width: 300px;
+    height: 440px;
+`
+
+export const ProjectName = styled.p`
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+`
+
+export const ProjectDetail = styled.p`
+    font-size: 14px;
+    color: #555;
+    margin: 8px 0;
+
+    a {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    }
 
     img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
+    width: 250px;
+    height: 250px;
     }
-        button {
-            width: 100%;
-        }
-            p {
-                color: ${cores.text1};
-                font-size: 12px;
-                font-weight: bold;
-                text-align: center;
-                line-height: 20px;
-            }
-
-        button {
-        width: 100%;
-        font-size: 16px;
-        font-weight: bold;
-        color: ${cores.text1};
-        height: 32px;
-        background-color: transparent;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
-
-        &:hover {
-            background-color: #00a8ff;
-            border: none;
-            height: 34px;
-        }
-        }
 `

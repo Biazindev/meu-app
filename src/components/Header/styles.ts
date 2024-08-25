@@ -45,7 +45,7 @@ export const Display = styled.div<{ $isOpen: boolean }>`
             z-index: 5000;
      }
     }
-`;
+`
 
 export const LinkHeader = styled(Link)`
     font-size: 32px;
@@ -81,7 +81,7 @@ export const Hamburguer = styled.div`
         display: none;
         z-index: 1001;
     }
-`;
+`
 
 export const NavMobile = styled.nav`
     display: flex;

@@ -30,7 +30,6 @@ const ListCard = () => {
             <Container>
                 <Card ref={ref} className={inView ? 'visible' : ''}>
                     <div className="container">
-                        <img src={Efood} alt="Seu App" />
                         <CardItem>
                             <div className="adjuste">
                                 <h2>Do Físico para o Digital em Grande Estilo!</h2>
@@ -38,6 +37,7 @@ const ListCard = () => {
                                 <ButtonLink target="_blank" rel="noopener noreferrer" to={whatsappUrl}>Saiba mais</ButtonLink>
                             </div>
                         </CardItem>
+                        <img src={Efood} alt="Seu App" />
                     </div>
                 </Card>
             </Container>

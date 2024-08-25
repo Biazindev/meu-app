@@ -22,6 +22,7 @@ export const Container = styled.div`
         
         @media(max-width: ${breakpoints.tablet}) {
         width: 100%;
+        height: 320px;
         font-size: 16px;
         object-fit: cover;
     }
@@ -40,7 +41,7 @@ export const Container = styled.div`
         background: rgba(0, 0, 0, 0.4);
         z-index: 1;
         @media(max-width: ${breakpoints.tablet}) {
-        height: 420px;
+        height: 320px;
     }
     }
 

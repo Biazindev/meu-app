@@ -1,16 +1,18 @@
-import banner from '../../assets/icons/icons (1).jpg'
 import { ButtonLink } from '../Button/styles'
 import { Container } from './styles'
+import cel from '../../assets/device.png'
 
 const Info = () => {
     return (
         <>
            <Container>
-            <h1>Sistema Web, aplicativos Android, IOS e mais...</h1>
-            <p>Desenvolvemos apps, sistemas, sites, soluções com inteligência artificial, integrações entre sistemas e muito mais!</p>
-            <img src={banner} alt="" />
-            <ButtonLink to={'/portifolio'}>Saiba mais</ButtonLink>
-           </Container>
+                <div>
+                <h1>Transforme ideias em resultados</h1>
+                <p>Criação de sites, apps e sistemas personalizados para levar sua empresa ao próximo nível!</p>
+                <ButtonLink to={'/portifolio'}>Saiba mais</ButtonLink>
+                </div>
+                <img src={cel} alt="celular" />           
+            </Container>
         </>
     )
 }

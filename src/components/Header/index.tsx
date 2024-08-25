@@ -32,7 +32,10 @@ const Header: React.FC = () => {
                                 <LinkHeader onClick={() => setIsMenuOpen(false)} to="/form">Repositório</LinkHeader>
                             </li>
                             <li>
-                                <LinkHeader onClick={() => setIsMenuOpen(false)} to={'/'}>Sobre</LinkHeader>
+                                <LinkHeader onClick={() => setIsMenuOpen(false)} to={'/tech'}>Tecnologias</LinkHeader>
+                            </li>
+                            <li>
+                                <LinkHeader onClick={() => setIsMenuOpen(true)} to={'/contact'}>Contato</LinkHeader>
                             </li>
                         </ul>
                     </nav>
@@ -59,7 +62,10 @@ const Header: React.FC = () => {
                                 <LinkHeader onClick={() => setIsMenuOpen(true)} to="/form">Repositório</LinkHeader>
                             </li>
                             <li>
-                                <LinkHeader onClick={() => setIsMenuOpen(true)} to={'/'}>Sobre</LinkHeader>
+                                <LinkHeader onClick={() => setIsMenuOpen(true)} to={'/tech'}>Tecnologias</LinkHeader>
+                            </li>
+                            <li>
+                                <LinkHeader onClick={() => setIsMenuOpen(true)} to={'/contact'}>Contato</LinkHeader>
                             </li>
                         </ul>
                     </nav>

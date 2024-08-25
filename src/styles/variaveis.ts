@@ -7,6 +7,28 @@ export const cores = {
     black: '#000'
 } 
 
+export const colors = {
+    java: "#007396",
+    react: "#61DBFB",
+    bootstrap: "#563D7C",
+    sass: "#CC6699",
+    less: "#1D2C4D",
+    grunt: "#FBA740",
+    gulp: "#CF4647",
+    jquery: "#0769AD",
+    tailwindcss: "#38B2AC",
+    typescript: "#3178C6",
+    redux: "#764ABC",
+    nodejs: "#8CC84B",
+    hibernate: "#2E8B57",
+    postgresql: "#336791",
+    mongodb: "#47A248",
+    maven: "#C71A40",
+    springboot: "#6DB33F",
+    junit: "#25A162",
+    cypress: "#17202A"
+}
+
 export const breakpoints = {
     smallMobile: '320px',
     mobile: '480px',

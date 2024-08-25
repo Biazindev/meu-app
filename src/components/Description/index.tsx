@@ -27,7 +27,6 @@ const Description = () => {
             <Container>
                 <Card ref={ref} className={inView ? 'visible' : ''}>
                     <div className="container">
-                    <img src={caixa} alt="Seu App" />
                         <CardItem>
                         <div className="adjuste">
                         <h2>Vendas Que Não Param!</h2>
@@ -35,6 +34,7 @@ const Description = () => {
                                 <ButtonLink target="_blank" rel="noopener noreferrer" to={whatsappUrl}>Saiba mais</ButtonLink>
                         </div>
                         </CardItem>
+                        <img src={caixa} alt="Seu App" />
                     </div>
                 </Card>
             </Container>

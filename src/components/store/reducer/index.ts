@@ -1,15 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit"
 import modalReducer from "./modal"
-import api from '../../services/api'
-
+import githubApi from '../../services/githubApi'
+import vercelApi from '../../services/vercelApi'
 
 export const store = configureStore({
     reducer: {
         modal: modalReducer, 
-        [api.reducerPath]: api.reducer,
+        [githubApi.reducerPath]: githubApi.reducer,
+        [vercelApi.reducerPath]: vercelApi.reducer,
     },
     middleware: (getDefaultMiddleware) => 
-        getDefaultMiddleware().concat(api.middleware),
+        getDefaultMiddleware()
+            .concat(githubApi.middleware)
+            .concat(vercelApi.middleware),
 })
-
-
