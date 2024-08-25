@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import github from '../../assets/github.svg'
 
-import { Container, Heading, RepoList, RepoItem, RepoTitle, RepoDescription } from './styles'
+import github from '../../assets/github.svg'
+import { useGetReposQuery } from '../services/api'
 import WhatsAppLink from '../Whats'
 import Loader from '../Loader'
+
+import { Container, Heading, RepoList, RepoItem, RepoTitle, RepoDescription } from './styles'
 import { ButtonLink } from '../Button/styles'
-import { useGetReposQuery } from '../services/api'
 
 const Repositories: React.FC = () => {
-    const [page, setPage] = useState(1)
+    const [page] = useState(1)
     const { data: repos = [], error, isLoading, isFetching } = useGetReposQuery(page)
 
     const getDescricao = (descricao: string | null) => {

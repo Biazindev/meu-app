@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit"
+
 import modalReducer from "./modal"
 import githubApi from '../../services/githubApi'
 import vercelApi from '../../services/vercelApi'

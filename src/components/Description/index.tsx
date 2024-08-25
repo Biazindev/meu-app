@@ -1,8 +1,11 @@
-import { Container, Card, CardItem } from "./styles"
-import caixa from '../../assets/caixa.jpg'
 import { useInView } from 'react-intersection-observer'
+
+import caixa from '../../assets/caixa.jpg'
 import { ButtonLink } from "../Button/styles"
 import WhatsAppLink from "../Whats"
+
+import { Container, Card, CardItem } from "./styles"
+
 
 
 const Description = () => {

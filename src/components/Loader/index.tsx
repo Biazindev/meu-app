@@ -1,4 +1,5 @@
 import { MoonLoader } from "react-spinners"
+
 import { Container } from "./styles"
 import { cores } from "../../styles/variaveis"
 

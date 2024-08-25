@@ -1,7 +1,9 @@
 import { useInView } from "react-intersection-observer"
-import { Card, Container, CardItem } from "./styles"
+
 import WhatsAppLink from "../Whats"
 import seuApp from '../../assets/seuapp.png'
+
+import { Card, Container, CardItem } from "./styles"
 import { ButtonLink } from "../Button/styles"
 
 const ListOffers = () => {

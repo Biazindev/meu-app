@@ -1,8 +1,10 @@
-import { Container, Card, CardItem } from "./styles"
-import Efood from '../../assets/Efood.png'
 import { useInView } from 'react-intersection-observer'
-import { ButtonLink } from "../Button/styles"
+
+import Efood from '../../assets/Efood.png'
 import WhatsAppLink from "../Whats"
+
+import { Container, Card, CardItem } from "./styles"
+import { ButtonLink } from "../Button/styles"
 
 
 const ListCard = () => {

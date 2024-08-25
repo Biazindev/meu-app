@@ -26,7 +26,12 @@ export const colors = {
     maven: "#C71A40",
     springboot: "#6DB33F",
     junit: "#25A162",
-    cypress: "#17202A"
+    cypress: "#17202A",
+    linkedin: "#0A66C2",
+    facebook: "#1877F2",
+    github: "#171515",
+    instagram: "#E4405F",
+    people: "#FFFFFF"
 }
 
 export const breakpoints = {

@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import fundo from '../../assets/header3.png';
-import { ContainerHeader, Display, DisplayHeader, Hamburguer, LinkHeader, NavMobile } from './styles';
-import { useDispatch } from 'react-redux';
-import { open } from '../../components/store/reducer/modal';
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+
+import fundo from '../../assets/header3.png'
+import { open } from '../../components/store/reducer/modal'
+
+import { ContainerHeader, Display, DisplayHeader, Hamburguer, LinkHeader, NavMobile } from './styles'
 
 const Header: React.FC = () => {
     const dispatch = useDispatch();

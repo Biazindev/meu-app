@@ -1,8 +1,10 @@
-import { Container, Card, CardItem } from "./styles"
-import Eplay from '../../assets/header.png'
 import { useInView } from 'react-intersection-observer'
+
+import Eplay from '../../assets/header.png'
 import { ButtonLink } from "../Button/styles"
 import WhatsAppLink from "../Whats"
+
+import { Container, Card, CardItem } from "./styles"
 
 
 const List = () => {

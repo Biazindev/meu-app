@@ -1,12 +1,16 @@
-import { Container } from "./styles"
-import WhatsAppLink from "../Whats"
-import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+
+import WhatsAppLink from "../Whats"
+import Slider from "react-slick"
+
 import banner1 from '../../assets/header.png'
 import banner2 from '../../assets/banner2.jpg'
 import banner3 from '../../assets/Efood.png'
 import { ButtonLink } from "../Button/styles"
+
+import { Container } from "./styles"
+
 
 const Hero = () => {
   const phoneNumber = '5517981716648'

@@ -1,10 +1,13 @@
 import { useState } from 'react'
-import { Container } from './style'
+
 import WhatsAppLink from '../Whats'
-import Loader from '../Loader';
+import Loader from '../Loader'
+
+import { Container } from './style'
+
 
 const Agenda = () => {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true)
 
     const handleLoad = () => {
         setIsLoading(false)

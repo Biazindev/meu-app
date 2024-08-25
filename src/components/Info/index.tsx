@@ -1,6 +1,7 @@
+import cel from '../../assets/device.png'
+
 import { ButtonLink } from '../Button/styles'
 import { Container } from './styles'
-import cel from '../../assets/device.png'
 
 const Info = () => {
     return (

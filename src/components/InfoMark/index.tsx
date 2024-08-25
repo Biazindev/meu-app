@@ -1,6 +1,7 @@
+import market from '../../assets/market.png'
+
 import { ButtonLink } from '../Button/styles'
 import { Container } from './styles'
-import market from '../../assets/market.png'
 
 const InfoMark = () => {
     return (

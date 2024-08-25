@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+
 import { breakpoints, cores } from './variaveis'
 
 export const GlobalCss = createGlobalStyle`

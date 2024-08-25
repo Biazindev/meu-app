@@ -6,18 +6,9 @@ import { FaInstagram } from "react-icons/fa6"
 import { MdAttachEmail } from "react-icons/md"
 
 import { Card, Container, Formulario, Sociais, ButtonEmail, ButtonZap, Env, TextItem } from "./styles"
-import { cores } from "../../styles/variaveis"
-
-const colors = {
-    linkedin: "#0A66C2",
-    facebook: "#1877F2",
-    github: "#171515",
-    instagram: "#E4405F",
-    people: "#FFFFFF"
-}
+import { colors, cores } from "../../styles/variaveis"
 
 const Contato = () => {
-    // Configuração de validação com Yup
     const validationSchema = Yup.object({
         nome: Yup.string().required("Nome é obrigatório"),
         email: Yup.string().email("Email inválido").required("Email é obrigatório"),
@@ -25,7 +16,6 @@ const Contato = () => {
         mensagem: Yup.string().required("Mensagem é obrigatória")
     })
 
-    // Formik para lidar com o formulário
     const formik = useFormik({
         initialValues: {
             nome: "",
@@ -42,7 +32,6 @@ const Contato = () => {
 
     const handleSubmitWhatsApp = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
-        // Verifica se todos os campos estão válidos antes de enviar para o WhatsApp
         if (!formik.isValid) {
             formik.setTouched({
                 nome: true,

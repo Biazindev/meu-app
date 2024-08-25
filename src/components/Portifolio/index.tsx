@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Container, SectionTitle, ProjectCard, ProjectName, ProjectDetail } from './styles'
+
 import { useGetDeploymentsQuery } from '../services/vercelApi'
 import Loader from '../Loader'
+
+import { Container, SectionTitle, ProjectCard, ProjectName, ProjectDetail } from './styles'
 
 const Portifolio = () => {
     const { data: vercelProjects, error: vercelError, isLoading } = useGetDeploymentsQuery()
