@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useFormik } from "formik"
+import * as Yup from "yup"
 import { BsFillPeopleFill } from "react-icons/bs"
 import { FaLinkedin, FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa6"
@@ -16,27 +17,42 @@ const colors = {
 }
 
 const Contato = () => {
-    const [formData, setFormData] = useState({
-        nome: "",
-        email: "",
-        telefone: "",
-        mensagem: ""
+    // Configuração de validação com Yup
+    const validationSchema = Yup.object({
+        nome: Yup.string().required("Nome é obrigatório"),
+        email: Yup.string().email("Email inválido").required("Email é obrigatório"),
+        telefone: Yup.string().matches(/^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/, "Telefone inválido").required("Telefone é obrigatório"),
+        mensagem: Yup.string().required("Mensagem é obrigatória")
     })
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target
-        setFormData({ ...formData, [name]: value })
-    }
-
-    const handleSubmitEmail = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault()
-        const mailtoLink = `mailto:tiago.biazin02@gmail.com?subject=Contato de ${formData.nome}&body=Nome: ${formData.nome}%0AEmail: ${formData.email}%0ATelefone: ${formData.telefone}%0AMensagem: ${formData.mensagem}`
-        window.location.href = mailtoLink
-    }
+    // Formik para lidar com o formulário
+    const formik = useFormik({
+        initialValues: {
+            nome: "",
+            email: "",
+            telefone: "",
+            mensagem: ""
+        },
+        validationSchema: validationSchema,
+        onSubmit: (values) => {
+            const mailtoLink = `mailto:tiago.biazin02@gmail.com?subject=Contato de ${values.nome}&body=Nome: ${values.nome}%0AEmail: ${values.email}%0ATelefone: ${values.telefone}%0AMensagem: ${values.mensagem}`
+            window.location.href = mailtoLink
+        }
+    })
 
     const handleSubmitWhatsApp = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
-        const whatsappLink = `https://api.whatsapp.com/send?phone=5517981716648&text=Nome: ${formData.nome}%0AEmail: ${formData.email}%0ATelefone: ${formData.telefone}%0AMensagem: ${formData.mensagem}`
+        // Verifica se todos os campos estão válidos antes de enviar para o WhatsApp
+        if (!formik.isValid) {
+            formik.setTouched({
+                nome: true,
+                email: true,
+                telefone: true,
+                mensagem: true
+            })
+            return
+        }
+        const whatsappLink = `https://api.whatsapp.com/send?phone=5517981716648&text=Nome: ${formik.values.nome}%0AEmail: ${formik.values.email}%0ATelefone: ${formik.values.telefone}%0AMensagem: ${formik.values.mensagem}`
         window.open(whatsappLink, "_blank")
     }
 
@@ -86,56 +102,72 @@ const Contato = () => {
             </Card>
            </Sociais>
             <Formulario>
-            <form>
+            <form onSubmit={formik.handleSubmit}>
                 <ul>
                     <li>
                         <input
                             type="text"
                             name="nome"
                             placeholder="Nome"
-                            value={formData.nome}
-                            onChange={handleInputChange}
+                            value={formik.values.nome}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                         />
+                        {formik.touched.nome && formik.errors.nome ? (
+                            <div style={{ color: "#61DBFB" }}>{formik.errors.nome}</div>
+                        ) : null}
                     </li>
                     <li>
                         <input
                             type="email"
                             name="email"
                             placeholder="E-Mail"
-                            value={formData.email}
-                            onChange={handleInputChange}
+                            value={formik.values.email}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                         />
+                        {formik.touched.email && formik.errors.email ? (
+                            <div style={{ color: "#61DBFB" }}>{formik.errors.email}</div>
+                        ) : null}
                     </li>
                     <li>
                         <input
                             type="tel"
                             name="telefone"
                             placeholder="Telefone"
-                            value={formData.telefone}
-                            onChange={handleInputChange}
+                            value={formik.values.telefone}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                         />
+                        {formik.touched.telefone && formik.errors.telefone ? (
+                            <div style={{ color: "#61DBFB" }}>{formik.errors.telefone}</div>
+                        ) : null}
                     </li>
                     <li>
                         <textarea
                             name="mensagem"
                             placeholder="Mensagem"
-                            value={formData.mensagem}
-                            onChange={handleInputChange}
+                            value={formik.values.mensagem}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                         />
+                        {formik.touched.mensagem && formik.errors.mensagem ? (
+                            <div style={{ color: "#61DBFB" }}>{formik.errors.mensagem}</div>
+                        ) : null}
                     </li>
                 </ul>
+                <Env>
+                    <ButtonEmail type="submit">
+                        <MdAttachEmail size={24} color={colors.people} />
+                        Enviar
+                    </ButtonEmail>
+                    <ButtonZap onClick={handleSubmitWhatsApp}>
+                        <FaWhatsapp size={24} color={colors.people} />
+                        Enviar
+                    </ButtonZap>
+                </Env>
             </form>
-            <Env>
-                <ButtonEmail onClick={handleSubmitEmail}>
-                    <MdAttachEmail size={24} color={colors.people} />
-                    Enviar
-                </ButtonEmail>
-                <ButtonZap onClick={handleSubmitWhatsApp}>
-                    <FaWhatsapp size={24} color={colors.people} />
-                    Enviar
-                </ButtonZap>
-            </Env>
-        </Formulario>
+            </Formulario>
         </Container>
         </>
     )

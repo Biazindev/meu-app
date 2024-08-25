@@ -1,8 +1,8 @@
-import linkedin from '../../assets/linkedin.svg';
-import facebook from '../../assets/facebook.svg';
-import github from '../../assets/github.svg';
-import instagram from '../../assets/instagram.svg';
-import { Container, Contato, LinkRedes } from './styles';
+import linkedin from '../../assets/linkedin.svg'
+import facebook from '../../assets/facebook.svg'
+import github from '../../assets/github.svg'
+import instagram from '../../assets/instagram.svg'
+import { Container, Contato, LinkRedes } from './styles'
 
 const Footer = () => (
     <Container>
@@ -40,6 +40,6 @@ const Footer = () => (
             </LinkRedes>
         </Contato>
     </Container>
-);
+)
 
-export default Footer;
+export default Footer
