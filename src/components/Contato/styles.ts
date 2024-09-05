@@ -191,5 +191,5 @@ export const TextItem = styled.h1`
     display: flex;
     justify-content: center;
     padding: 24px;
-    color: ${cores.text1};
+    color: ${cores.text3};
 `

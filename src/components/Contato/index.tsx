@@ -1,7 +1,7 @@
 import { useFormik } from "formik"
 import * as Yup from "yup"
 import { BsFillPeopleFill } from "react-icons/bs"
-import { FaLinkedin, FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa"
+import { FaFacebook, FaWhatsapp } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa6"
 import { MdAttachEmail } from "react-icons/md"
 
@@ -25,7 +25,7 @@ const Contato = () => {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            const mailtoLink = `mailto:tiago.biazin02@gmail.com?subject=Contato de ${values.nome}&body=Nome: ${values.nome}%0AEmail: ${values.email}%0ATelefone: ${values.telefone}%0AMensagem: ${values.mensagem}`
+            const mailtoLink = `mailto:metalurgicabiazin@hotmail.com?subject=Contato de ${values.nome}&body=Nome: ${values.nome}%0AEmail: ${values.email}%0ATelefone: ${values.telefone}%0AMensagem: ${values.mensagem}`
             window.location.href = mailtoLink
         }
     })
@@ -41,7 +41,7 @@ const Contato = () => {
             })
             return
         }
-        const whatsappLink = `https://api.whatsapp.com/send?phone=5517981716648&text=Nome: ${formik.values.nome}%0AEmail: ${formik.values.email}%0ATelefone: ${formik.values.telefone}%0AMensagem: ${formik.values.mensagem}`
+        const whatsappLink = `https://api.whatsapp.com/send?phone=5544999875065&text=Nome: ${formik.values.nome}%0AEmail: ${formik.values.email}%0ATelefone: ${formik.values.telefone}%0AMensagem: ${formik.values.mensagem}`
         window.open(whatsappLink, "_blank")
     }
 
@@ -57,16 +57,10 @@ const Contato = () => {
                         <h2>+</h2>
                         <BsFillPeopleFill style={{ marginRight: '4px' }} size={48} color={colors.people} />
                     </span>
-                    <a href="https://www.linkedin.com/in/tiagobiazin/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin size={40} color={colors.linkedin} />
-                    </a>
-                    <a href="https://www.facebook.com/tiago.tiagobiazin?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/share/F1yrmuiAtZ4HtwSs/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
                         <FaFacebook size={40} color={colors.facebook} />
                     </a>
-                    <a href="https://github.com/Biazindev" target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={40} color={colors.github} />
-                    </a>
-                    <a href="https://www.instagram.com/tiago_adriana_biazin?igsh=MXNsNm9rcjZ2OHc4aw==" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/metalurgicabiazin10?igsh=NzYxeml4Ym9ydmJ6" target="_blank" rel="noopener noreferrer">
                         <FaInstagram size={40} color={colors.instagram} />
                     </a>
                 </div>
@@ -77,7 +71,7 @@ const Contato = () => {
                     <span>
                         <MdAttachEmail size={48} color={colors.people} />
                     </span>
-                    <h3 style={{color: `${cores.text1}`}}>tiago.biazin02@gmail.com</h3>
+                    <h3 style={{color: `${cores.text1}`}}>metalurgicabiazin@hotmail.com</h3>
                 </div>
             </Card>
             <Card>
@@ -86,7 +80,7 @@ const Contato = () => {
                     <span>
                         <FaWhatsapp size={48} color={colors.people} />
                     </span>
-                    <h3 style={{color: `${cores.text1}`}}>+55 (17) 98171-6648</h3>
+                    <h3 style={{color: `${cores.text1}`}}>+55 (44) 99987-5065</h3>
                 </div>
             </Card>
            </Sociais>

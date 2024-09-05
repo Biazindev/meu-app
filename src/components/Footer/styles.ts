@@ -8,8 +8,8 @@ export const Container = styled.footer`
     width: 100%;
     height: 150px;
     padding-top: 16px;
-    background-color: ${cores.azulEscuro};
-    color: #535c68;
+    background: linear-gradient(135deg, #5352ed 0%, #1B1464 100%);
+    color: #dfe4ea;
     margin-top: auto;
 
     @media(max-width: ${breakpoints.mobile}) {
@@ -30,11 +30,13 @@ export const Container = styled.footer`
         font-size: 16px;
         font-weight: bold;
         text-align: start;
+        color: #dfe4ea;
     }
 
     p {
         font-size: 14px;
         line-height: 1.6;
+        color: #dfe4ea;
         text-align: start;
         @media(max-width: ${breakpoints.mobile}) {
     }
@@ -62,6 +64,7 @@ export const Contato = styled.div`
     p {
         margin-right: 12px;
         text-align: start;
+        color: #dfe4ea;
 
         @media(max-width: ${breakpoints.mobile}) {
         margin-top: 16px;
@@ -73,6 +76,7 @@ export const Contato = styled.div`
     span {
         font-weight: bold;
         text-align: start;
+        color: #dfe4ea;
     }
         @media(max-width: ${breakpoints.mobile}) {
         background-size: cover;
@@ -89,6 +93,7 @@ export const SocialIcons = styled.div`
     p {
         margin-bottom: 8px;
         font-weight: bold;
+        color: #dfe4ea;
     }
 
     div {

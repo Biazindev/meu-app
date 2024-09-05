@@ -4,7 +4,7 @@ import { Whats } from './style'
 
 
 const WhatsAppLink = () => {
-  const phoneNumber = '5517981716648'
+  const phoneNumber = '5544999875065'
   const message = 'Olá, gostaria de saber mais sobre...'
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`

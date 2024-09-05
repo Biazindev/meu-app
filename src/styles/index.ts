@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { breakpoints, cores } from './variaveis'
+import { breakpoints } from './variaveis'
 
 export const GlobalCss = createGlobalStyle`
     * {
@@ -15,10 +15,9 @@ export const GlobalCss = createGlobalStyle`
         overflow-x: hidden;
         }
     body {
-        background-color: ${cores.azulEscuro};
+        background-color: #dcdde1;
     }
     .container {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
         max-width: 1024px;
         width: 100%;
         margin: 0 auto;
